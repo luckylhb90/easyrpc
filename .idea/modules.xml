@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/easyrpc.iml" filepath="$PROJECT_DIR$/easyrpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-client/easyrpc-client.iml" filepath="$PROJECT_DIR$/easyrpc-client/easyrpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-client-test/easyrpc-client-test.iml" filepath="$PROJECT_DIR$/easyrpc-client-test/easyrpc-client-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-common/easyrpc-common.iml" filepath="$PROJECT_DIR$/easyrpc-common/easyrpc-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-server/easyrpc-server.iml" filepath="$PROJECT_DIR$/easyrpc-server/easyrpc-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-server-test/easyrpc-server-test.iml" filepath="$PROJECT_DIR$/easyrpc-server-test/easyrpc-server-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyrpc-service-api/easyrpc-service-api.iml" filepath="$PROJECT_DIR$/easyrpc-service-api/easyrpc-service-api.iml" />
+    </modules>
+  </component>
+</project>
