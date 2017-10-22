@@ -24,7 +24,7 @@ public class RpcClientApplication {
 
     @Bean
     public HelloService buildHelloService(RpcProxyFactory rpcProxyFactory) {
-        return rpcProxyFactory.proxyBean(HelloService.class, 100);
+        return rpcProxyFactory.proxyBean(HelloService.class, 0);
     }
 
 

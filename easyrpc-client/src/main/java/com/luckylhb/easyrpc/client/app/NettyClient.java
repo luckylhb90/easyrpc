@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Project : easyrpc
- * @Description : TODO
+ * @Description : rpc client
  * @Author : luckylhb
  * @Date : 2017/10/1
  */
@@ -40,7 +40,7 @@ public class NettyClient implements IClient {
     private volatile boolean closed = false;
 
     //    @Value("${client.workerGroupThreads:5}")
-    int workerGroupThreads = 5;
+    int workerGroupThreads = Runtime.getRuntime().availableProcessors() * 2;
 
     @Override
     public void connect(final InetSocketAddress socketAddress) {

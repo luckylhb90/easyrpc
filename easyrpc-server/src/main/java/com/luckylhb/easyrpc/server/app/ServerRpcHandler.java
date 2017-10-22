@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * @Project : easyrpc
- * @Description : TODO
+ * @Description : rpc请求处理handler
  * @Author : luckylhb
  * @Date : 2017/10/1
  */
@@ -24,6 +24,10 @@ public class ServerRpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
     private static final Logger logger = LoggerFactory.getLogger(ServerRpcHandler.class);
 
     private final Map<String, Object> serviceMapping;
+
+    public ServerRpcHandler(Map<String, Object> serviceMapping) {
+        this.serviceMapping = serviceMapping;
+    }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
@@ -34,10 +38,6 @@ public class ServerRpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
         }
         response.setError(cause);
         ctx.writeAndFlush(response);
-    }
-
-    public ServerRpcHandler(Map<String, Object> serviceMapping) {
-        this.serviceMapping = serviceMapping;
     }
 
     @Override

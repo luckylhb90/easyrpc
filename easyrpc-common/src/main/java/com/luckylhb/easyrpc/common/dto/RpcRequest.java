@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @Project : easyrpc
- * @Description : TODO
+ * @Description : RPC 请求实体类
  * @Author : luckylhb
  * @Date : 2017/10/1
  */

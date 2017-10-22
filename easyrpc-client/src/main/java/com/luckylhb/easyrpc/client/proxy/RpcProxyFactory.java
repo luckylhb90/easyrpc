@@ -19,7 +19,11 @@ public class RpcProxyFactory {
 
     public <T> T proxyBean(Class<?> targetInterface, long timeoutInMillis) {
         NettyClient client = NettyClientFactory.get(targetInterface);
-        return (T) Proxy.newProxyInstance(getClass().getClassLoader(), new Class[]{targetInterface}, new RpcProxy(client, Pair.of(timeoutInMillis, TimeUnit.MILLISECONDS)));
+        Pair<Long, TimeUnit> timeUnitPair = null;
+        if (timeoutInMillis > 0) {
+            timeUnitPair = Pair.of(timeoutInMillis, TimeUnit.MILLISECONDS);
+        }
+        return (T) Proxy.newProxyInstance(getClass().getClassLoader(), new Class[]{targetInterface}, new RpcProxy(client, timeUnitPair));
     }
 
 }
